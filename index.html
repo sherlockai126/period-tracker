@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Period Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌸 Period Tracker</h1>
+        
+        <!-- Period Recording Section -->
+        <section class="section">
+            <h2>Record Period Date</h2>
+            <div class="input-group">
+                <label for="period-date">Last Period Start Date:</label>
+                <input type="date" id="period-date">
+                <button id="save-date-btn">Save Date</button>
+            </div>
+            <div id="cycle-info" class="info-box"></div>
+        </section>
+
+        <!-- Reminders Section -->
+        <section class="section">
+            <h2>Upcoming Reminders</h2>
+            <div id="reminders" class="reminders-box">
+                <p>No upcoming reminders</p>
+            </div>
+        </section>
+
+        <!-- Symptoms Section -->
+        <section class="section">
+            <h2>Symptom Log</h2>
+            <div class="input-group">
+                <label for="symptom-date">Date:</label>
+                <input type="date" id="symptom-date">
+                <label for="symptoms">Symptoms:</label>
+                <textarea id="symptoms" placeholder="Note any symptoms: cramps, mood changes, flow intensity, etc."></textarea>
+                <button id="save-symptom-btn">Save Symptoms</button>
+            </div>
+            <div id="symptom-history" class="history-box"></div>
+        </section>
+
+        <!-- Period History -->
+        <section class="section">
+            <h2>Period History</h2>
+            <div id="period-history" class="history-box"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
