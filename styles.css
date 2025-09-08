@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffeef8 0%, #f0e6ff 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #d63384;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #6f42c1;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #f8d7da;
+    padding-bottom: 5px;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 15px;
+    border-left: 5px solid #d63384;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 600;
+    color: #495057;
+}
+
+input[type="date"],
+textarea {
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="date"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #d63384;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+button {
+    background: linear-gradient(45deg, #d63384, #6f42c1);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(214, 51, 132, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.info-box,
+.reminders-box,
+.history-box {
+    background: white;
+    border: 2px solid #f8d7da;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.reminder {
+    background: linear-gradient(45deg, #fff3cd, #ffeaa7);
+    border-left: 4px solid #ffc107;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.reminder.urgent {
+    background: linear-gradient(45deg, #f8d7da, #ffb3ba);
+    border-left-color: #dc3545;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.symptom-entry,
+.period-entry {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0;
+}
+
+.symptom-entry h4,
+.period-entry h4 {
+    color: #d63384;
+    margin-bottom: 8px;
+}
+
+.no-data {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .section {
+        padding: 15px;
+    }
+}
